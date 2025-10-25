@@ -54,6 +54,7 @@ th, td {
   border: 1px solid #ccc;
   padding: 8px;
   text-align: left;
+  vertical-align: middle;
 }
 th {
   background: #004aad;
@@ -61,6 +62,21 @@ th {
 }
 tr:nth-child(even) {
   background: #f9f9f9;
+}
+
+/* ===== TOMBOL DOWNLOAD ===== */
+.btn-download {
+  background: #00bcd4;
+  color: white;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  display: inline-block;
+  transition: 0.2s;
+}
+.btn-download:hover {
+  background: #0097a7;
 }
 
 /* ===== DAFTAR / LIST ===== */
@@ -81,50 +97,108 @@ ol {
 /* ===== RESPONSIF ===== */
 @media(max-width:700px){
   .tab { flex: 1 1 100%; text-align: center; }
+  th, td { font-size: 13px; }
 }
 </style>
 
 <!-- ===== NAVIGASI TAB ===== -->
 <div class="tabs">
-  <div class="tab active" onclick="openTab(event, 'dasar')">Dasar Hukum</div>
+  <div class="tab active" onclick="openTab(event, 'produk')">Produk Hukum</div>
+  <div class="tab" onclick="openTab(event, 'dasar')">Dasar Hukum</div>
   <div class="tab" onclick="openTab(event, 'tabel')">Tabel Kriteria</div>
   <div class="tab" onclick="openTab(event, 'tim')">Tim Evaluasi</div>
   <div class="tab" onclick="openTab(event, 'kajian')">Kajian Andalalin</div>
 </div>
 
-<!-- ===== TAB 1: DASAR HUKUM ===== -->
-<div id="dasar" class="tab-content active">
-  <h3>Dasar Hukum Analisis Dampak Lalu Lintas</h3>
-  <p><strong>Undang-Undang Nomor 22 Tahun 2009</strong><br>
-  <em>Tentang Lalu Lintas dan Angkutan Jalan</em></p>
-  <p><strong>Pasal 99 ayat (1)</strong><br>
-  Setiap rencana pembangunan pusat kegiatan, permukiman, dan infrastruktur yang dapat menimbulkan gangguan keamanan, keselamatan, ketertiban, dan kelancaran lalu lintas wajib dilakukan Analisis Dampak Lalu Lintas (Andalalin).</p>
+<!-- ===== TAB: PRODUK HUKUM (ACTIVE) ===== -->
+<div id="produk" class="tab-content active">
+  <h3>Produk Hukum Terkait Andalalin</h3>
+  <p>Unduh dokumen resmi berikut (klik tombol <em>UNDUH</em>):</p>
 
-  <p><strong>Pasal 100 ayat (1)</strong><br>
-  Analisis dampak lalu lintas dilakukan oleh lembaga konsultan yang memiliki tenaga ahli bersertifikat.</p>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:50px;">No</th>
+        <th>Nama Peraturan</th>
+        <th style="width:120px; text-align:center;">Berkas</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align:center;">1</td>
+        <td>Undang-Undang Nomor 22 Tahun 2009 tentang Lalu Lintas dan Angkutan Jalan</td>
+        <td style="text-align:center;">
+          <!-- ganti ID_FILE_UU22 dengan ID Google Drive -->
+          <a class="btn-download" href="https://drive.google.com/uc?export=download&id=10CimmrYXnc55XJuC9mv_VbGS87hV9RAo">UNDUH</a>
+        </td>
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">2</td>
+        <td>Peraturan Menteri Perhubungan Nomor 17 Tahun 2021 tentang Penyelenggaraan Analisis Dampak Lalu Lintas</td>
+        <td style="text-align:center;">
+          <!-- ganti ID_FILE_PM17 dengan ID Google Drive -->
+          <a class="btn-download" href="https://drive.google.com/uc?export=download&id=1zPZC9HKPmrZyiWBpen23zXigUAOC28jk">UNDUH</a>
+        </td>
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">3</td>
+        <td>Peraturan Menteri Perhubungan Nomor 13 Tahun 2014 tentang Rambu Lalu Lintas</td>
+        <td style="text-align:center;">
+          <!-- ganti ID_FILE_PM13 dengan ID Google Drive -->
+          <a class="btn-download" href="https://drive.google.com/uc?export=download&id=1Wlf6JD94eJC3SxAEFFnMF_MQlRc6f2SG">UNDUH</a>
+        </td>
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">4</td>
+        <td>Peraturan Menteri Perhubungan Nomor 34 Tahun 2014 tentang Marka Jalan</td>
+        <td style="text-align:center;">
+          <!-- ganti ID_FILE_PM34 dengan ID Google Drive -->
+          <a class="btn-download" href="https://drive.google.com/uc?export=download&id=1AE5v8ZtQcRhSQSy2EaiZtui-CQ5Es6x_">UNDUH</a>
+        </td>
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">5</td>
+        <td>Peraturan Menteri Perhubungan Nomor 49 Tahun 2014 tentang Alat Pemberi Isyarat Lalu Lintas</td>
+        <td style="text-align:center;">
+          <!-- ganti ID_FILE_PM49 dengan ID Google Drive -->
+          <a class="btn-download" href="https://drive.google.com/uc?export=download&id=1x04-MY6AujuRcMVLyp0fw4cmxFae3-Oo">UNDUH</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ===== TAB 2: DASAR HUKUM ===== -->
+<div id="dasar" class="tab-content">
+  <h3>Dasar Hukum Analisis Dampak Lalu Lintas</h3>
+  <p><strong>Undang-Undang Nomor 22 Tahun 2009</strong><br><em>Tentang Lalu Lintas dan Angkutan Jalan</em></p>
+  <p><strong>Pasal 99 ayat (1)</strong><br>Setiap rencana pembangunan pusat kegiatan, permukiman, dan infrastruktur yang dapat menimbulkan gangguan keamanan, keselamatan, ketertiban, dan kelancaran lalu lintas wajib dilakukan Analisis Dampak Lalu Lintas (Andalalin).</p>
+
+  <p><strong>Pasal 100 ayat (1)</strong><br>Analisis dampak lalu lintas dilakukan oleh lembaga konsultan yang memiliki tenaga ahli bersertifikat.</p>
 
   <hr>
 
-  <p><strong>Peraturan Pemerintah Nomor 32 Tahun 2011</strong><br>
-  <em>Tentang Manajemen dan Rekayasa, Analisis Dampak, serta Manajemen Kebutuhan Lalu Lintas</em></p>
+  <p><strong>Peraturan Pemerintah Nomor 32 Tahun 2011</strong><br><em>Tentang Manajemen dan Rekayasa, Analisis Dampak, serta Manajemen Kebutuhan Lalu Lintas</em></p>
   <p><strong>Pasal 47</strong> – Setiap rencana pembangunan pusat kegiatan, permukiman, dan infrastruktur yang menimbulkan dampak lalu lintas wajib dilakukan analisis dampak lalu lintas.</p>
 
   <p><strong>Pasal 50</strong> – Pengembang wajib menunjuk konsultan bersertifikat untuk menyusun dokumen Andalalin.</p>
 
   <hr>
 
-  <p><strong>Peraturan Menteri Perhubungan Nomor 75 Tahun 2015</strong><br>
-  <em>Tentang Penyelenggaraan Analisis Dampak Lalu Lintas</em></p>
+  <p><strong>Peraturan Menteri Perhubungan Nomor 75 Tahun 2015</strong><br><em>Tentang Penyelenggaraan Analisis Dampak Lalu Lintas</em></p>
   <p>Hasil analisis dampak lalu lintas merupakan salah satu syarat perizinan seperti izin lokasi, izin mendirikan bangunan, atau izin pembangunan gedung dengan fungsi khusus.</p>
 
   <hr>
 
-  <p><strong>Peraturan Bupati Jember (Rencana)</strong><br>
-  <em>Tentang Pembentukan Tim Evaluasi dan Pelaksanaan Kajian Andalalin di Kabupaten Jember</em></p>
+  <p><strong>Peraturan Bupati Jember (Rencana)</strong><br><em>Tentang Pembentukan Tim Evaluasi dan Pelaksanaan Kajian Andalalin di Kabupaten Jember</em></p>
   <p>Menjadi dasar hukum teknis pelaksanaan analisis dan evaluasi dampak lalu lintas oleh Dinas Perhubungan Kabupaten Jember.</p>
 </div>
 
-<!-- ===== TAB 2: TABEL KRITERIA ===== -->
+<!-- ===== TAB 3: TABEL KRITERIA ===== -->
 <div id="tabel" class="tab-content">
   <h3>Kriteria Kegiatan yang Wajib Andalalin</h3>
   <p>Berikut acuan umum jenis rencana pembangunan yang wajib melakukan Analisis Dampak Lalu Lintas (mengacu pada Permenhub No.75 Tahun 2015).</p>
@@ -150,7 +224,7 @@ ol {
   </table>
 </div>
 
-<!-- ===== TAB 3: TIM EVALUASI ===== -->
+<!-- ===== TAB 4: TIM EVALUASI ===== -->
 <div id="tim" class="tab-content">
   <h3>Tim Evaluasi Dokumen Andalalin Kabupaten Jember</h3>
 
@@ -196,7 +270,7 @@ ol {
   <p>Tim ini bertugas menilai dan memberikan rekomendasi kelayakan hasil analisis dampak lalu lintas sebelum diterbitkan <strong>persetujuan Andalalin</strong> oleh Bupati Jember melalui Dinas Perhubungan.</p>
 </div>
 
-<!-- ===== TAB 4: KAJIAN ANDALALIN ===== -->
+<!-- ===== TAB 5: KAJIAN ANDALALIN ===== -->
 <div id="kajian" class="tab-content">
   <h3>Komponen Kajian Andalalin</h3>
   <p>Kajian Analisis Dampak Lalu Lintas di Kabupaten Jember mengacu pada <strong>Permenhub No.75 Tahun 2015</strong> dan pedoman teknis Kementerian Perhubungan.</p>
@@ -221,12 +295,10 @@ function openTab(evt, tabId) {
   const activeContent = document.getElementById(tabId);
   activeContent.classList.add("active");
 
-  // Tambahan khusus untuk Google Sites:
-  // Biar tinggi iframe otomatis menyesuaikan konten saat tab diganti
+  // Untuk Google Sites agar tinggi iframe otomatis menyesuaikan
   setTimeout(() => {
-    const height = activeContent.scrollHeight + 50;
+    const height = activeContent.scrollHeight + 60;
     window.parent.postMessage({ 'google-sites-embed-resize': height }, '*');
-  }, 100);
+  }, 150);
 }
 </script>
-
