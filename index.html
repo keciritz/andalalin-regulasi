@@ -1,0 +1,232 @@
+<style>
+/* ===== GAYA UTAMA TABS ===== */
+.tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-bottom: 4px solid #ffcc00;
+  margin-bottom: 15px;
+  font-family: Arial, sans-serif;
+}
+.tab {
+  background: #eaeaea;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 2px;
+  font-weight: bold;
+  color: #004aad;
+  border-radius: 6px 6px 0 0;
+  transition: all 0.3s ease;
+}
+.tab:hover {
+  background: #ffcc00;
+  color: #000;
+}
+.tab.active {
+  background: #004aad;
+  color: #fff;
+}
+
+/* ===== KONTEN TAB ===== */
+.tab-content {
+  display: none;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-top: none;
+  padding: 20px;
+  border-radius: 0 0 8px 8px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #222;
+}
+.tab-content.active {
+  display: block;
+}
+
+/* ===== TABEL ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 14px;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background: #004aad;
+  color: white;
+}
+tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+/* ===== DAFTAR / LIST ===== */
+ul, ol {
+  margin-left: 20px;
+  padding-left: 10px;
+}
+ul::before, ul::after, ol::before, ol::after {
+  content: none !important;
+}
+ul {
+  list-style: disc;
+}
+ol {
+  list-style: decimal;
+}
+
+/* ===== RESPONSIF ===== */
+@media(max-width:700px){
+  .tab { flex: 1 1 100%; text-align: center; }
+}
+</style>
+
+<!-- ===== NAVIGASI TAB ===== -->
+<div class="tabs">
+  <div class="tab active" onclick="openTab(event, 'dasar')">Dasar Hukum</div>
+  <div class="tab" onclick="openTab(event, 'tabel')">Tabel Kriteria</div>
+  <div class="tab" onclick="openTab(event, 'tim')">Tim Evaluasi</div>
+  <div class="tab" onclick="openTab(event, 'kajian')">Kajian Andalalin</div>
+</div>
+
+<!-- ===== TAB 1: DASAR HUKUM ===== -->
+<div id="dasar" class="tab-content active">
+  <h3>Dasar Hukum Analisis Dampak Lalu Lintas</h3>
+  <p><strong>Undang-Undang Nomor 22 Tahun 2009</strong><br>
+  <em>Tentang Lalu Lintas dan Angkutan Jalan</em></p>
+  <p><strong>Pasal 99 ayat (1)</strong><br>
+  Setiap rencana pembangunan pusat kegiatan, permukiman, dan infrastruktur yang dapat menimbulkan gangguan keamanan, keselamatan, ketertiban, dan kelancaran lalu lintas wajib dilakukan Analisis Dampak Lalu Lintas (Andalalin).</p>
+
+  <p><strong>Pasal 100 ayat (1)</strong><br>
+  Analisis dampak lalu lintas dilakukan oleh lembaga konsultan yang memiliki tenaga ahli bersertifikat.</p>
+
+  <hr>
+
+  <p><strong>Peraturan Pemerintah Nomor 32 Tahun 2011</strong><br>
+  <em>Tentang Manajemen dan Rekayasa, Analisis Dampak, serta Manajemen Kebutuhan Lalu Lintas</em></p>
+  <p><strong>Pasal 47</strong> – Setiap rencana pembangunan pusat kegiatan, permukiman, dan infrastruktur yang menimbulkan dampak lalu lintas wajib dilakukan analisis dampak lalu lintas.</p>
+
+  <p><strong>Pasal 50</strong> – Pengembang wajib menunjuk konsultan bersertifikat untuk menyusun dokumen Andalalin.</p>
+
+  <hr>
+
+  <p><strong>Peraturan Menteri Perhubungan Nomor 75 Tahun 2015</strong><br>
+  <em>Tentang Penyelenggaraan Analisis Dampak Lalu Lintas</em></p>
+  <p>Hasil analisis dampak lalu lintas merupakan salah satu syarat perizinan seperti izin lokasi, izin mendirikan bangunan, atau izin pembangunan gedung dengan fungsi khusus.</p>
+
+  <hr>
+
+  <p><strong>Peraturan Bupati Jember (Rencana)</strong><br>
+  <em>Tentang Pembentukan Tim Evaluasi dan Pelaksanaan Kajian Andalalin di Kabupaten Jember</em></p>
+  <p>Menjadi dasar hukum teknis pelaksanaan analisis dan evaluasi dampak lalu lintas oleh Dinas Perhubungan Kabupaten Jember.</p>
+</div>
+
+<!-- ===== TAB 2: TABEL KRITERIA ===== -->
+<div id="tabel" class="tab-content">
+  <h3>Kriteria Kegiatan yang Wajib Andalalin</h3>
+  <p>Berikut acuan umum jenis rencana pembangunan yang wajib melakukan Analisis Dampak Lalu Lintas (mengacu pada Permenhub No.75 Tahun 2015).</p>
+  <table>
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Jenis Rencana Pembangunan</th>
+        <th>Ukuran Minimal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>Pusat Perbelanjaan / Ritel</td><td>≥ 500 m² luas lantai bangunan</td></tr>
+      <tr><td>2</td><td>Perkantoran</td><td>≥ 1.000 m² luas lantai bangunan</td></tr>
+      <tr><td>3</td><td>Hotel / Penginapan</td><td>≥ 50 kamar</td></tr>
+      <tr><td>4</td><td>Rumah Sakit / Klinik</td><td>≥ 50 tempat tidur</td></tr>
+      <tr><td>5</td><td>Restoran / Rumah Makan</td><td>≥ 100 tempat duduk</td></tr>
+      <tr><td>6</td><td>Perumahan</td><td>≥ 50 unit</td></tr>
+      <tr><td>7</td><td>Ruko / Pertokoan Terpadu</td><td>≥ 2.000 m² luas bangunan</td></tr>
+      <tr><td>8</td><td>Fasilitas Pendidikan</td><td>≥ 500 siswa</td></tr>
+      <tr><td>9</td><td>Infrastruktur Transportasi (terminal, stasiun, pelabuhan, dsb.)</td><td>Wajib</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ===== TAB 3: TIM EVALUASI ===== -->
+<div id="tim" class="tab-content">
+  <h3>Tim Evaluasi Dokumen Andalalin Kabupaten Jember</h3>
+
+  <p><strong>Dasar Hukum:</strong></p>
+  <ul>
+    <li>Peraturan Pemerintah Nomor 32 Tahun 2011 Pasal 54</li>
+    <li>Peraturan Menteri Perhubungan Nomor 75 Tahun 2015 Pasal 14</li>
+  </ul>
+
+  <p>Dalam pelaksanaan penilaian dokumen Andalalin, Pemerintah Kabupaten Jember melalui Dinas Perhubungan membentuk <strong>Tim Evaluasi Dokumen Andalalin</strong> dengan susunan sebagai berikut:</p>
+
+  <ol>
+    <li><strong>Tim Pengarah</strong>
+      <ul>
+        <li>Ketua: Asisten Perekonomian dan Pembangunan Sekretariat Daerah Kabupaten Jember</li>
+        <li>Anggota:
+          <ul>
+            <li>Dinas Perhubungan Kabupaten Jember</li>
+            <li>Dinas Pekerjaan Umum dan Penataan Ruang</li>
+            <li>Dinas Lingkungan Hidup</li>
+            <li>Satuan Lalu Lintas Polres Jember</li>
+            <li>Perangkat daerah teknis terkait sesuai kebutuhan kajian</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li><strong>Tim Teknis</strong>
+      <ul>
+        <li>Ketua: Kepala Bidang Lalu Lintas Dinas Perhubungan Kabupaten Jember</li>
+        <li>Anggota:
+          <ul>
+            <li>Seksi Manajemen dan Rekayasa Lalu Lintas</li>
+            <li>Seksi Angkutan</li>
+            <li>Perwakilan Satuan Lalu Lintas Polres Jember</li>
+            <li>Tenaga Ahli atau Konsultan Transportasi (bila diperlukan)</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ol>
+
+  <p>Tim ini bertugas menilai dan memberikan rekomendasi kelayakan hasil analisis dampak lalu lintas sebelum diterbitkan <strong>persetujuan Andalalin</strong> oleh Bupati Jember melalui Dinas Perhubungan.</p>
+</div>
+
+<!-- ===== TAB 4: KAJIAN ANDALALIN ===== -->
+<div id="kajian" class="tab-content">
+  <h3>Komponen Kajian Andalalin</h3>
+  <p>Kajian Analisis Dampak Lalu Lintas di Kabupaten Jember mengacu pada <strong>Permenhub No.75 Tahun 2015</strong> dan pedoman teknis Kementerian Perhubungan.</p>
+  <ul>
+    <li>Perencanaan dan metodologi analisis dampak lalu lintas</li>
+    <li>Analisis kondisi lalu lintas eksisting</li>
+    <li>Analisis bangkitan dan tarikan lalu lintas</li>
+    <li>Simulasi kinerja lalu lintas sebelum, saat, dan sesudah pembangunan</li>
+    <li>Rekomendasi penanganan dampak lalu lintas</li>
+    <li>Rencana pemantauan dan evaluasi</li>
+    <li>Rincian tanggung jawab antara Pemerintah dan Pengembang</li>
+  </ul>
+</div>
+
+<script>
+function openTab(evt, tabId) {
+  const tabs = document.querySelectorAll(".tab");
+  const contents = document.querySelectorAll(".tab-content");
+  tabs.forEach(t => t.classList.remove("active"));
+  contents.forEach(c => c.classList.remove("active"));
+  evt.currentTarget.classList.add("active");
+  const activeContent = document.getElementById(tabId);
+  activeContent.classList.add("active");
+
+  // Tambahan khusus untuk Google Sites:
+  // Biar tinggi iframe otomatis menyesuaikan konten saat tab diganti
+  setTimeout(() => {
+    const height = activeContent.scrollHeight + 50;
+    window.parent.postMessage({ 'google-sites-embed-resize': height }, '*');
+  }, 100);
+}
+</script>
+
